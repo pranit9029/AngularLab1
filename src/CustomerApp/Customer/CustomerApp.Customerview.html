@@ -1,12 +1,14 @@
-Customer Code :<input [(ngModel)]="CustomerModel.CustomerCode" type=text/><br>
-Customer Name :<input [(ngModel)]="CustomerModel.CustomerName" type=text/><br>
-Customer Amount :<input [(ngModel)]="CustomerModel.CustomerAmount" type=text/><br>
-<input type="button" value="Add" (click)="Add()"/><br>
+
+<form [formGroup]="CustomerModel.formCustomerGroup">
+Customer Code :<input formControlName="CustomerCodeControl" [(ngModel)]="CustomerModel.CustomerCode" type=text/><br>
+Customer Name :<input formControlName="CustomerControl" [(ngModel)]="CustomerModel.CustomerName" type=text/><br>
+Customer Amount :<input [ngModelOptions]="{standalone: true}" [(ngModel)]="CustomerModel.CustomerAmount" type=text/><br>
+<input [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="button" value="Add" (click)="Add()"/><br>
+</form>
 
 {{CustomerModel.CustomerCode}}<br>
 {{CustomerModel.CustomerName}}<br>
 {{CustomerModel.CustomerAmount}}<br>
-
 <table>
     <tr>
         <td>Customer Code</td>

@@ -8,8 +8,8 @@ import { Customer } from "./CustomerApp.model"
 export class CustomerComponenet {
   title = 'customerApplication';
   CustomerModel: Customer = new Customer();
-
   CustomerModels:Array<Customer>=new Array<Customer>();
+  
   Add()
   {
     this.CustomerModels.push(this.CustomerModel);
