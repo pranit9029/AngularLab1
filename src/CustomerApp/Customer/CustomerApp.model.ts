@@ -12,7 +12,7 @@ export class Customer{
         this.formCustomerGroup = _builder.group({}); //use the builder to create
 
         this.formCustomerGroup.
-        addControl("CustomerControl",
+        addControl("CustomerNameControl",
         new FormControl('',Validators.required)
         );
 

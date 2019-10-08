@@ -15,6 +15,12 @@ export class CustomerComponenet {
     this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel=new Customer();//Clear UI
   }
+
+  hasError(typeofvalidator:string,controlname:string):boolean{
+    return this.CustomerModel.formCustomerGroup
+    .contains[controlname]
+    .hasError(typeofvalidator);
+  }
 }
 
 
