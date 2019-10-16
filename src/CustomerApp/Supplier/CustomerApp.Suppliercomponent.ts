@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseLogger } from '../Utility/CustomerAppLogger';
 
 @Component({
   
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   
 })
 export class SupplierComponenet {
-  
+  LogObj:BaseLogger=null;
+
+  constructor(_logger :BaseLogger){
+    this.LogObj=_logger;
+    this.LogObj.Log();    
+  }
 }
 
 

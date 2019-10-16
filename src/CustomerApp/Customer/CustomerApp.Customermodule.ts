@@ -4,10 +4,10 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from "@angular/router";
 import { CustomerComponenet } from './CustomerApp.Customercomponent';
 import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
-
+import { GridComponent } from "../Utility/CustomerApp.Grid.Component"
 @NgModule({
   declarations: [
-    CustomerComponenet,
+    CustomerComponenet,GridComponent
       
   ],
   imports: [
@@ -15,7 +15,9 @@ import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
     RouterModule.forChild(CustomerRoutes),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+  
+],
   bootstrap: [CustomerComponenet]
 })
 export class CustomerModule { }
