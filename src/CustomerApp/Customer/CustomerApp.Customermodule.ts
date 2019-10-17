@@ -7,7 +7,8 @@ import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
 import { GridComponent } from "../Utility/CustomerApp.Grid.Component"
 @NgModule({
   declarations: [
-    CustomerComponenet,GridComponent
+    CustomerComponenet,
+    GridComponent
       
   ],
   imports: [

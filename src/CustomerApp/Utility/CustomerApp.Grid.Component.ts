@@ -1,5 +1,8 @@
 
-import{Component,Input,Output,EventEmitter} from '@angular/core'
+import{Component,
+      Input,
+      Output,
+      EventEmitter} from '@angular/core'
 
 @Component({
     selector:"grid-ui",
@@ -8,17 +11,17 @@ import{Component,Input,Output,EventEmitter} from '@angular/core'
 
 export class GridComponent{
     //All the logic Code Behind
-    GridColumns:Array<object>=new Array<object>();
+    gridColumns:Array<Object>=new Array<Object>();
     //GridData
-    GridData:Array<object>=new Array<object>();
+    gridData:Array<Object>=new Array<Object>();
 
     @Input("grid-columns")
-    set SetGridColumns(_gridcolumns:Array<object>){
-        this.GridColumns=_gridcolumns;
+    set SetGridColumns(_gridColumns:Array<Object>){
+        this.gridColumns=_gridColumns;
     }
     @Input("grid-data")
-    set SetGridData(_gridData:Array<object>){
-        this.GridData=_gridData;
+    set SetGridData(_gridData:Array<Object>){
+        this.gridData=_gridData;
     }
     
     @Output("grid-selected")

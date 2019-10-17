@@ -7,12 +7,12 @@ Customer Amount :<input [ngModelOptions]="{standalone: true}" [(ngModel)]="Custo
 </form>
 <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('pattern','CustomerCodeControl'))">Customer code format is not proper</div><br>
 <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('required','CustomerCodeControl'))">Customer code is required</div><br>
-<div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('required','CustomerCodeControl'))">Customer name is required</div><br>
+<div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!(hasError('required','CustomerNameControl'))">Customer name is required</div><br>
 
 
 <grid-ui [grid-columns]="[{'colName':'CustomerCode'},{'colName':'CustomerName'},{'colName':'CustomerAmount'}]" 
          [grid-data]="CustomerModels"
-         (grid-selected)="SelectCustomer($event)">
-</grid-ui>
+         (grid-selected)="SelectCustomer($event)"
+         ></grid-ui>
 
 
